@@ -1,0 +1,21 @@
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}

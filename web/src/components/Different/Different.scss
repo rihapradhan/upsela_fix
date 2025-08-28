@@ -1,0 +1,129 @@
+.different {
+  background-image: url('/images/services-hero-bg.svg');
+  background-size: cover;
+  background-position: center center;
+
+  line-height: 120%;
+
+  &-content {
+    height: 100%;
+
+    h2 {
+      color: $white;
+      max-width: 33ch;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-transform: capitalize;
+    }
+
+    p {
+      color: #fff;
+      font-size: calc(1.1875rem / 1.125);
+      line-height: 120%;
+    }
+  }
+
+  &.centered .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      margin: auto;
+      max-width: 18ch;
+      font-size: $h1-font-size;
+    }
+
+    .different-talk {
+      margin-inline: auto;
+    }
+
+    .btn {
+      width: auto;
+      margin-top: 42px;
+    }
+  }
+
+  &-talk {
+    padding: 60px 55px;
+    gap: 12px;
+    background: #F2F2F2;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 24.75rem;
+    margin-left: auto;
+
+    h3 {
+      margin-bottom: 0;
+      text-align: center;
+      font-size: calc(1.1875rem / 1.125);
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .different-talk .btn {
+    font-size: 13px;
+  }
+
+  .different-talk h3 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1360px) {
+  .different {
+    padding-block: 6.25rem;
+
+    .container {
+      max-width: 1280px;
+    }
+
+    &-talk {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1270px) and (max-width: 1290px) {
+  .different .container {
+    padding-inline: 4rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .different-talk {
+    max-width: 20rem;
+    margin-inline: auto;
+    margin-top: 1.5rem;
+    padding: 2.5rem 2rem;
+  }
+
+  .different-content {
+    h2 {
+      margin-top: 0 !important;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+
+  .different.centered .row {
+    h2 {
+      font-size: 24px;
+    }
+
+    .btn {
+      margin-top: 24px;
+    }
+  }
+}

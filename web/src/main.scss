@@ -1,0 +1,71 @@
+// web/src/main.scss
+
+$primary-color: #007acc;
+
+body {
+  background-color: $primary-color;
+}
+@import './base/fonts.scss';
+@import './base/variable.scss';
+@import './base/grid.scss';
+@import './base/global.scss';
+
+
+@import './components/Header/Header.scss';
+@import './components/Navbar/Navbar.scss';
+@import './components/MobileMenu/MobileMenu.scss';
+@import './components/Banner/Banner.scss';
+@import './components/Footer/Footer.scss';
+@import './components/Button/Button.scss';
+@import './components/whyUpsela/whyUpsela.scss';
+@import './components/Services/Services.scss';
+@import './components/AboutInfo/AboutInfo.scss';
+@import './components/BlogInfo/BlogInfo.scss';
+@import './components/CaseStudy/CaseStudy.scss';
+@import './components/Team/Team.scss';
+@import './components/Fundamental/Fundamental.scss';
+@import './components/FundamentalItem/FundamentalItem.scss';
+@import './components/Modal/Modal.scss';
+@import './components/Spinner/Spinner.scss';
+@import './components/ContactForm/ContactForm.scss';
+@import './components/Talent/Talent.scss';
+
+
+@import './components/ProjectTeam/ProjectTeam.scss';
+@import './components/CaseCarousel/CaseCarousel.scss';
+@import './components/WebDevelopment/WebDevelopment.scss';
+@import './components/ServicesCollapsible/ServiceCollapsible.scss';
+@import './components/Collaspsible/Collapsible.scss';
+@import './components/ServicesRest/ServicesRest.scss';
+@import './components/RestLists/RestLists.scss';
+@import './components/Different/Different.scss';
+@import './components/Offer/Offer.scss';
+@import './components/CaseItem/CaseItem.scss';
+@import './components/CaseTop/CaseTop.scss';
+@import './components/ResultSolution/ResultSolution.scss';
+@import './components/BlogSlider/BlogSlider.scss';
+
+@import './components/DropDown/DropDown.scss';
+@import './components/Opportunity/Opportunity.scss';
+@import './components/careerPartner/careerPartner.scss';
+@import './components/Partners/Partners.scss';
+@import './components/Sector/Sector.scss';
+@import './components/HomeModal/HomeModal.scss';
+
+
+
+
+@import './pages/AboutPage/About.scss';
+@import './pages/ServicesSinglePage/ServicesSingle.scss';
+@import './pages/ContactPage/ContactPage.scss';
+@import './pages/CaseStudiesPage/CaseStudies.scss';
+@import './pages/CaseStudyPostPage/CaseStudyPostPage.scss';
+@import './pages/BlogsPage/BlogsPage.scss';
+@import './pages/BlogPostPage/BlogPostPage.scss';
+@import './pages/CareerSearchPage/CareerSearchPage.scss';
+@import './pages/CareerJobPostPage/CareerJobPostPage.scss';
+@import './pages/JobPostDetailPage/JobPostDetailPage.scss';
+@import './pages/JobApplyPage/JobApplyPage.scss';
+@import './pages/EmployersPage/EmployersPage.scss';
+
+

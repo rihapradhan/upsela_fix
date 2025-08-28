@@ -1,0 +1,66 @@
+.talent {
+  padding-top: 120px;
+  padding-bottom: 40px;
+  background: #0d0908 url('../images/sparkling.png') no-repeat left top;
+  background-size: contain;
+  height: 720px;
+}
+
+.talent-content {
+  color: #fff;
+
+  p {
+    margin-bottom: 28px;
+    font-size: calc(18px / 1.125);
+  }
+
+  h2 {
+    color: #fff;
+    margin-bottom: 24px;
+    font-size: calc(2.75rem / 1.125);
+  }
+}
+
+.talent-insight {
+  margin-top: 48px;
+  color: #fff;
+
+  h3 {
+    color: #fff;
+    font-size: $h3-font-size;
+    margin-bottom: 24px;
+  }
+
+}
+
+.talent-insight-title {
+  margin-bottom: 24px;
+  text-transform: uppercase;
+
+  a {
+    color: #fff
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .talent {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .talent {
+    background-size: cover;
+  }
+  .talent-insight {
+
+    >.row {
+      gap: 2rem;
+    }
+
+  }
+
+  .talent-content h2 {
+    font-size: 32px;
+  }
+}

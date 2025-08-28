@@ -1,0 +1,67 @@
+.service-card {
+  border-radius: 0.625rem;
+  border: 1px solid #474747;
+  background-color: $navy-blue;
+  padding: 28px 28px 28px 28px;
+  line-height: 120%;
+  color: $text-gray;
+  min-width: 280px;
+  min-height: 320px;
+  width: calc(25% - 20px);
+  // transition: background-color 0.2s;
+
+  &.odd-count {
+    min-width: 308px;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__icon {
+    margin-bottom: 2.1875rem;
+    background-image: linear-gradient(#4C4950, #1C1C1E);
+    width: 48px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    transition: background-color 0.3s;
+  }
+
+  &__title {
+    color: inherit;
+    max-width: 240px;
+    font-size: $h3-font-size;
+    margin-bottom: 0.875rem;
+    font-weight: 600;
+  }
+
+  &__body {
+    max-width: 240px;
+    font-size: 0.8125rem;
+  }
+
+  &:hover {
+    background-color: #666df2;
+    transition: background-color 0.3s;
+    color: $white;
+
+    .service-card__icon {
+      background-image: linear-gradient(1deg, #666DF2 0.59%, #9FA4FE 99.57%);
+      // transition: background-image 0.3s;
+    }
+  }
+}
+
+@media only screen and (max-width: 528px) {
+  .service-card {
+    margin-inline: auto;
+  }
+}

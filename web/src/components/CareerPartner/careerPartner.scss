@@ -1,0 +1,28 @@
+
+
+
+.career-partner {
+  background: url(../images/section-03.jpg) no-repeat left top;
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+
+}
+
+.career-partner-content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+
+  h2 {
+    font-size: $h1-font-size;
+    line-height: 120%;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 32px;
+  }
+
+}

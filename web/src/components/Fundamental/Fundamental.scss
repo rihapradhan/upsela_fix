@@ -1,0 +1,48 @@
+
+/*fundamental*/
+
+.fundamental-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-content: center;
+}
+
+
+.fundamental-item {
+  background: #f2f2f2;
+  border-radius: 20px;
+  padding: 2rem;
+
+  img {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    background: linear-gradient(to top, #D911FF 0%, #03C1FE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+@media only screen and (max-width: 992px) {
+
+  .fundamental-list{
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .fundamental-list {
+    grid-template-columns: 1fr
+  }
+
+}

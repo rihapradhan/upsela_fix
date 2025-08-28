@@ -1,0 +1,143 @@
+.web-development {
+  padding-block: 10.75rem 0;
+  color: $white;
+  position: relative;
+  isolation: isolate;
+
+  p {
+    line-height: 120%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 55%;
+    border-radius: 0 0 3.75rem 3.75rem;
+    background-image: url('/images/services-hero-bg.svg');
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+  }
+
+  .secondaryInfos {
+    padding-bottom: 0;
+  }
+}
+
+.web-development-sub {
+  margin-bottom: 2rem;
+  font-size: calc(1.1875rem / 1.125);
+}
+
+.page-heading {
+  color: inherit;
+  font-size: $h1-font-size;
+  margin-bottom: 1.5rem;
+  // text-wrap: balance;
+  max-width: 40ch;
+  margin-inline: auto;
+  line-height: 120%;
+}
+
+.hero-text {
+  font-size: 1rem;
+  max-width: 81ch;
+  margin-block: 0;
+  margin-inline: auto;
+}
+
+.secondaryInfos {
+  padding-block: 6.25rem;
+
+  &Section {
+    background-color: $white;
+  }
+
+  >div:not(:last-child) {
+    margin-bottom: 4.5rem;
+  }
+
+  h3 {
+    max-width: 36ch;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    font-size: 2.0625rem;
+  }
+
+  p {
+    color: initial;
+    font-size: 1rem;
+    max-width: 94ch;
+    margin-inline: auto;
+    margin-bottom: 0;
+  }
+}
+
+.video-outer {
+  margin-top: 5rem;
+  border-radius: 30px;
+  margin-inline: auto;
+
+  img {
+    border-radius: 1.875rem;
+
+    @media screen and (max-width: 1360px) {
+      max-width: 85%;
+    }
+  }
+}
+
+
+.video-bg {
+  position: relative;
+  z-index: 1;
+}
+
+.video-play-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+@media only screen and (max-width: 992px) {
+  .web-development {
+    padding-top: 8rem;
+
+    &::before {
+      height: 55%;
+      border-radius-bottom-left: 2rem;
+      border-radius-bottom-right: 2rem;
+    }
+  }
+  .page-heading {
+    font-size: 2rem;
+  }
+
+  .web-development-sub,
+  .web-development p {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .video-outer, {
+    margin-top: 4rem;
+  }
+
+  .secondaryInfos {
+    padding-top: 4rem;
+
+    h3 {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .web-development-sub {
+    margin-bottom: 1rem;
+  }
+}

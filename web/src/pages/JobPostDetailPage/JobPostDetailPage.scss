@@ -1,0 +1,167 @@
+.job-post-details {
+  padding-top: 120px;
+  padding-bottom: 100px;
+
+  >.container>.row {
+    align-items: flex-start;
+  }
+
+  .css-sticky {
+    position: sticky;
+    top: 24px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+
+    &.up {
+      transform: translateY(80px);
+      transition: transform 0.3s ease;
+    }
+  }
+}
+
+.button-back {
+  all: unset;
+  margin-left: -1rem;
+  cursor: pointer;
+}
+
+
+// .share-job
+.share-job {
+  margin-top: 24px;
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+
+.job-search-item--details {
+  border-bottom: 2px solid #E4E4E4;
+  box-shadow: none;
+  border-radius: 2px 2px 0 0;
+
+  .social-share-icons {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
+
+
+.similar-jobs-title {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #E4E4E4;
+  font-size: 13px;
+}
+
+
+.links {
+  margin-top: 24px;
+
+  a {
+    display: block;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+  }
+}
+
+
+.company-job-info {
+  padding: 24px;
+  background: #fff;
+}
+
+
+.c-title {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+
+.company-job-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #E4E4E4;
+}
+
+.company-job-item {
+  display: flex;
+  gap: 1rem;
+}
+
+
+.company-job-badge {
+  padding: 8px;
+  background: #F2F2F2;
+  display: inline-block;
+}
+
+.company-job-body {
+  flex: 1;
+
+  h3 {
+    font-weight: 400;
+    font-family: "mona-sansregular";
+    font-size: 1rem;
+  }
+}
+
+
+.job-description-title {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.sub-title {
+  color: #131623;
+  font-weight: bold;
+}
+
+.job-description-block {
+  &+& {
+    margin-top: 24px;
+  }
+
+  ul {
+    li {
+      font-size: 14px;
+      list-style: disc inside;
+    }
+  }
+
+}
+
+.job-description {
+  ul {
+    margin-bottom: 20px;
+
+    li {
+      list-style: disc inside;
+      margin-bottom: 8px;
+
+    }
+  }
+}
+
+
+.wp-block-heading {
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+}
+
+.note-me {
+  font-weight: bold;
+  color: $primary;
+}
+
+/*sticky*/
+
+.col-md-4.sticky {
+  top: 20px;
+  left: 0;
+  position: -webkit-sticky;
+  position: sticky;
+}

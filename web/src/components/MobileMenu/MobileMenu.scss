@@ -1,0 +1,159 @@
+/* MobileMenu.css */
+.mobile-menu {
+  display: none;
+}
+
+
+@media (min-width: 769px) {
+  .menuOverlay {
+    display: none;
+
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .menuOverlay {
+    height: 100%;
+    left: 0;
+    top: 65px;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.6);
+
+  }
+
+  .menuOverlay.show {
+    opacity: 1;
+    visibility: visible;
+
+  }
+
+  .mobile-menu.open .menu-items {
+    left: 0;
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10000;
+  }
+
+  .menu-items {
+    list-style: none;
+    padding: 0;
+    overflow: auto;
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #292929;
+      color: #aeb0b7;
+      font-weight: 500;
+
+      &:last-child {
+        padding: 10px;
+        border-bottom: 0;
+      }
+    }
+
+    a {
+      color: #aeb0b7;
+      font-weight: 500;
+    }
+  }
+
+
+
+  .mobile-menu {
+    display: block;
+
+    .submenu svg {
+      margin-top: -2px;
+      width: 16px;
+      height: auto;
+
+      path {
+        stroke: #aeb0b7;
+      }
+    }
+  }
+
+
+
+  .menu-items {
+    background: #131723;
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    right: 0;
+    padding: 0;
+    opacity: 0;
+    z-index: 1000;
+    width: 70%;
+    height: 100vh;
+    transition: all 0.2s ease;
+  }
+
+  .menu-items li {
+    padding: 10px;
+  }
+
+
+
+
+}
+
+// .nav-link span {
+//   line-height: 120%;
+// }
+
+.submenu {
+  position: relative;
+  align-items: flex-start;
+}
+
+.submenu button {
+  all: unset;
+  width: 100%;
+  display: flex;
+
+  align-items: center svg {
+    margin-top: -2px;
+  }
+}
+
+.submenu span::after {
+  content: '▼';
+  /* Adds a down arrow to indicate a submenu */
+  padding-left: 10px;
+  margin-left: auto;
+}
+
+.mobile-menu .submenu .submenu-items {
+  display: none;
+
+  padding: 10px;
+}
+
+.submenu span {
+  display: flex;
+
+}
+
+.submenu.active .submenu-items {
+  display: block;
+}
+
+
+
+
+/* Add more styles as needed to match your design */

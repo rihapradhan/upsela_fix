@@ -1,0 +1,29 @@
+.offer-outer{
+  background: #131623;
+  padding: 80px 0;
+
+  .fundamental-list{
+    grid-template-columns: repeat(3, 1fr);
+
+    p{
+      color: inherit;
+    }
+  }
+
+  p{
+    color: #fff;
+  }
+
+}
+
+.offer-title{
+  color: #fff;
+}
+
+
+@media only screen and (max-width: 767px){
+  .offer-outer .fundamental-list{
+    grid-template-columns: 1fr;
+
+  }
+}

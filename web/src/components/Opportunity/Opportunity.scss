@@ -1,0 +1,19 @@
+.opportunity{
+  background: #c213f2;
+  padding: 120px 0;
+}
+
+.img-inbetween {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .img-inbetween {
+    display: block;
+    margin-block: 4rem;
+  }
+
+  .opportunity .col-md-5 {
+    display: none;
+  }
+}

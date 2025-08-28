@@ -1,0 +1,144 @@
+.case-study {
+  padding-top: 80px;
+
+  .container {
+    overflow: hidden;
+  }
+
+  .slick-slider {
+    padding-bottom: 90px;
+  }
+
+  h2 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+
+.case-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    background: #b3b6f8;
+    transform: translate(280px, 280px);
+    transition: all 0.2s ease;
+    z-index: 0;
+  }
+
+  &:hover::after {
+    transform: translate(125px, 125px);
+  }
+
+
+  h3 {
+    margin-bottom: 24px;
+  }
+}
+
+.post-by {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.case-slider {
+  .slick-list {
+    margin: 0 -40px !important;
+  }
+
+  .slick-slide>div {
+    padding: 0 40px !important;
+  }
+}
+
+.case-study .slick-next {
+  left: 50%;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.case-study .slick-prev {
+  left: calc(50% - 40px);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.case-study .slick-prev,
+.case-study .slick-next {
+  background: #151825;
+  color: black !important;
+
+  text-align: center;
+  z-index: 1000;
+  top: inherit;
+  bottom: 0 !important;
+  height: 38px;
+  width: 40px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.slick-next:before {
+  content: ' \f054';
+}
+
+.slick-prev:before {
+  content: ' \f053';
+}
+
+.case-study .slick-prev:after,
+.case-study .slick-next:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.case-study .slick-prev:before,
+.case-study .slick-next:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 600;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 767px) {
+  .case-study .slick-next {
+    left: 50%;
+  }
+
+  .Case-Item .col-md-6{
+    margin-bottom: 40px;
+  }
+
+  // .case-study .slick-prev {
+  //   left: 45%;
+  // }
+
+  .case-slider {
+
+    .col-md-6:first-child {
+      order: 2;
+    }
+  }
+
+  .case-study {
+    padding-top: 40px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+  }
+}

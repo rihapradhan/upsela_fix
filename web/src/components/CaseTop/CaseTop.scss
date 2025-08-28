@@ -1,0 +1,38 @@
+.case-title {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.case-top-sub {
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+.case-top-wrap {
+  background: #f3f3f3 url(/images/dottedpattern.png) repeat left top;
+  padding-bottom: 80px;
+}
+
+.case-top-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.case-top-title {
+  font-size: 2.5rem;
+  margin-block: 2.25rem 3.75rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .case-top-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+
+}
