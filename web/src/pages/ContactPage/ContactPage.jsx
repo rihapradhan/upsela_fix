@@ -38,7 +38,7 @@ const ContactPage = () => {
                   <h3>US Headquartes</h3>
                   <div className="contact-detail">
                     <p>
-                      12100 Ford Street Suite # B153 | Farmers Branch | TX 75234
+                      2727 Ford Street Suite # B153 | Farmers Branch | TX 75234
                       Dallas
                     </p>
                     <p>469 961 7014</p>
