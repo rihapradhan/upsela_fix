@@ -1,15 +1,31 @@
 ---
 deployment:
   tasks:
-    # 0) Use server's Node (adjust version/path if needed; see note below)
+    # Make the script verbose and fail on first error
+    - 'set -xe'
+
+    # 0) Paths: replace USER if yours differs (yours looks like vqh20757hk29 from the screenshot)
+    - 'export HOME=/home/vqh20757hk29'
+    - 'export DOCROOT="$HOME/public_html"'
+
+    # 1) Ensure Node/Yarn on cPanel path (adjust node path if needed)
     - 'export PATH=/opt/cpanel/ea-nodejs20/bin:$PATH'
     - 'node -v'
     - 'npm -v'
-    # 1) Install package manager + deps
-    - 'corepack enable || true'
-    - 'yarn --version || npm i -g yarn'
+    - 'corepack enable || npm i -g yarn'
+    - 'yarn --version || true'
+
+    # 2) Install deps and build Redwood web
     - 'yarn install --frozen-lockfile'
-    # 2) Build only the web side
     - 'yarn rw build web'
-    # 3) Publish to your live site
-    - 'rsync -a --delete web/dist/ ~/public_html/'
+
+    # 3) Publish to the site (avoid rsync in case it’s not installed)
+    - 'mkdir -p "$DOCROOT"'
+    - 'rm -rf "$DOCROOT"/*'
+    - 'cp -R web/dist/* "$DOCROOT"/'
+
+    # 4) SPA routing for Redwood/React
+    - 'printf "RewriteEngine On\nRewriteBase /\nRewriteRule ^index\\.html$ - [L]\nRewriteCond %%{REQUEST_FILENAME} !-f\nRewriteCond %%{REQUEST_FILENAME} !-d\nRewriteRule . /index.html [L]\n" > "$DOCROOT/.htaccess"'
+
+    # 5) Drop a marker so you can confirm deploy landed
+    - 'echo "Deployed $(git rev-parse --short HEAD) on $(date)" > "$DOCROOT/deployed.txt"'
