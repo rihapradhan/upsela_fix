@@ -1,0 +1,15 @@
+---
+deployment:
+  tasks:
+    # 0) Use server's Node (adjust version/path if needed; see note below)
+    - 'export PATH=/opt/cpanel/ea-nodejs20/bin:$PATH'
+    - 'node -v'
+    - 'npm -v'
+    # 1) Install package manager + deps
+    - 'corepack enable || true'
+    - 'yarn --version || npm i -g yarn'
+    - 'yarn install --frozen-lockfile'
+    # 2) Build only the web side
+    - 'yarn rw build web'
+    # 3) Publish to your live site
+    - 'rsync -a --delete web/dist/ ~/public_html/'
