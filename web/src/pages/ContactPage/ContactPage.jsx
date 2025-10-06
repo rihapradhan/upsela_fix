@@ -65,7 +65,7 @@ const ContactPage = () => {
               </div>
               <div className="col-md-6 contact-map">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.4504277210112!2d-96.8929641252397!3d32.91269577704147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c27bd6952922f%3A0xbb232894f1073cea!2s12100%20Ford%20Rd%20Suite%20B153%2C%20Farmers%20Branch%2C%20TX%2075234%2C%20USA!5e0!3m2!1sen!2snp!4v1705827939621!5m2!1sen!2snp"
+                  src="https://maps.google.com/maps?q=2727%20LBJ%20Freeway%2C%20Farmers%20Branch%2C%20Suite%20425%20TX%2075234&t=&z=13&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="450"
                   style={{ border: '0' }}
