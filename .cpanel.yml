@@ -1,31 +1,30 @@
 ---
 deployment:
   tasks:
-    # Make the script verbose and fail on first error
+    # Fail fast + echo commands
     - 'set -xe'
 
-    # 0) Paths: replace USER if yours differs (yours looks like vqh20757hk29 from the screenshot)
-    - 'export HOME=/home/vqh20757hk29'
-    - 'export DOCROOT="$HOME/public_html"'
+    # 0) Define the deploy path exactly as cPanel docs suggest
+    - 'export DEPLOYPATH=/home/vqhz0757hkz9/public_html'
 
-    # 1) Ensure Node/Yarn on cPanel path (adjust node path if needed)
+    # 1) Ensure Node/Yarn are available (adjust node path if your host differs)
     - 'export PATH=/opt/cpanel/ea-nodejs20/bin:$PATH'
     - 'node -v'
     - 'npm -v'
     - 'corepack enable || npm i -g yarn'
     - 'yarn --version || true'
 
-    # 2) Install deps and build Redwood web
+    # 2) Install deps + build Redwood web
     - 'yarn install --frozen-lockfile'
     - 'yarn rw build web'
 
-    # 3) Publish to the site (avoid rsync in case it’s not installed)
-    - 'mkdir -p "$DOCROOT"'
-    - 'rm -rf "$DOCROOT"/*'
-    - 'cp -R web/dist/* "$DOCROOT"/'
+    # 3) Publish: clear old files and copy the new build (use absolute /bin paths as in docs)
+    - '/bin/mkdir -p "$DEPLOYPATH"'
+    - '/bin/rm -rf "$DEPLOYPATH"/*'
+    - '/bin/cp -a web/dist/. "$DEPLOYPATH"/'
 
-    # 4) SPA routing for Redwood/React
-    - 'printf "RewriteEngine On\nRewriteBase /\nRewriteRule ^index\\.html$ - [L]\nRewriteCond %%{REQUEST_FILENAME} !-f\nRewriteCond %%{REQUEST_FILENAME} !-d\nRewriteRule . /index.html [L]\n" > "$DOCROOT/.htaccess"'
+    # 4) SPA routing (React) so deep links hit index.html
+    - 'printf "RewriteEngine On\nRewriteBase /\nRewriteRule ^index\\.html$ - [L]\nRewriteCond %%{REQUEST_FILENAME} !-f\nRewriteCond %%{REQUEST_FILENAME} !-d\nRewriteRule . /index.html [L]\n" > "$DEPLOYPATH/.htaccess"'
 
-    # 5) Drop a marker so you can confirm deploy landed
-    - 'echo "Deployed $(git rev-parse --short HEAD) on $(date)" > "$DOCROOT/deployed.txt"'
+    # 5) Drop a marker for quick verification
+    - 'echo \"Deployed $(git rev-parse --short HEAD) on $(date)\" > \"$DEPLOYPATH/deployed.txt\"'
